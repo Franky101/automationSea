@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyPortfolio - Fran Bec</title>
+    <!-- CSS Bootstrap v5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" 
+    crossorigin="anonymous">
+    <!-- CSS Main -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Google Icon (improvised logo)-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  </head>
+
+
+  <body class="bg-light" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-smooth-scroll="true" data-bs-root-margin="0px 0px -30%" tabindex="0" >
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light navbar-fixed-top bg-light navbar-main fixed-top">
+      <div class="container">
+        <!-- Logo -->
+        <a href="#" class="navbar-brand">
+          <!-- <img src="./img/logo-g.png" alt="logo"> -->
+          <span class="material-symbols-outlined">
+            atr
+            </span>
+        </a>
+        <!-- Btn Collapse -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Items -->
+        <div class="collapse navbar-collapse" id="mainNav">
+          <div class="nav ms-auto text-dark flex-column flex-md-row">
+            <a href="#secHome" class="nav-link active text-dark">Home</a>
+            <a href="#secService" class="nav-link text-dark">Service</a>
+            <a href="#secPortafolio" class="nav-link text-dark">MyPortfolio</a>
+            <a href="#secContact" class="nav-link text-dark">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <!-- Header -->
+      <header id="secHome" class="row align-items-center header-main justify-content-center">
+        <div class="col-md-7 text-center text-md-start">
+          <!-- Intro -->
+          <h1 class="display-2">
+            <span class="d-block"> Hello,</span>
+            I'm Franco Becerra
+          </h1>
+          
+          <!-- Description -->
+          <p class="text-muted">Junior Python Developer & I love to make Projects.</p>
+
+          <!-- Social Links-->
+          <div class="d-none d-md-block icons-social-networks">
+            <!-- Instagram -->
+            <a href="#" target="_blank" class="bg-instagram bf-gradient">
+              <img src="img/icons/30instagram.svg" alt="Instagram">
+            </a>
+            <!-- Linkedin-->
+            <a href="#" target="_blank" class="bg-linkedin bg-gradient mx-3">
+              <img src="img/icons/30linkedin.svg" alt="Linkedin">
+            </a>
+            <!-- GitHub-->
+            <a href="#" target="_blank" class="bg-github bg-gradient">
+              <img src="img/icons/30github.svg" alt="Github">
+            </a>
+          </div>
+          
+        </div>
+        <div class="col-8 col-md-4">
+          <div class="photo-frame position-relative shadow rounded-circle">
+            <img src="img/profilepic6.png" alt="Franco Becerra" class="w-100">
+          </div>
+        </div>
+      </header>
+
+      <hr>
+
+      <!-- Skills -->
+      <section class="row justify-content-around text-center" id="secService">
+        <!-- Title -->
+        <h2 class="col-12 display-4 text-capitalize mb-3">
+          <span class="d-block">My Skills</span>
+          
+        </h2>
+        <!-- Cards Section -->
+        <!-- Cards 1 -->
+        <article class="col-10 col-md-10 col-lg-3 bg-white rounded shadow-md mb-4 p-3 fw-light shadow">
+          <!-- Icon -->
+          <img src="img/icons/pen.svg" alt="User Experience Design" class="bg-danger bg-gradient d-inline-bloc rounded-circle mb-3 mb-md-0 icon-service">
+          <!-- Title -->
+          <h3 class="text-capitalize">UX Design</h3>
+          <!-- Description -->
+          <p class="text-muted">
+            Development of user experience design for web pages and mobile applications.
+          </p>
+          <!-- Btn -->
+          <a href="#" class="btn btn-outline-danger">
+            Go
+          </a>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="col-10 col-md-10 col-lg-3 bg-white rounded shadow-md mb-4 p-3 fw-light shadow">
+          <!-- Icon -->
+          <img src="img/icons/code.svg" alt="Python Icon" class="bg-warning bg-gradient d-inline-bloc rounded-circle mb-3 mb-md-0 icon-service">
+          <!-- Title -->
+          <h3 class="text-capitalize">Python Development</h3>
+          <!-- Description -->
+          <p class="text-muted">
+            Python development for web pages and mobile applications.
+          </p>
+          <!-- Btn -->
+          <a href="#" class="btn btn-outline-danger">
+            Go
+          </a>
+        </article>
+        <!-- Card 3 -->
+        <article class="col-10 col-md-10 col-lg-3 bg-white rounded shadow-md mb-4 p-3 fw-light shadow">
+          <!-- Icon -->
+          <img src="img/icons/brand.svg" alt="Backend" class="bg-success bg-gradient d-inline-bloc rounded-circle mb-3 mb-md-0 icon-service">
+          <!-- Title -->
+          <h3 class="text-capitalize">Back-End</h3>
+          <!-- Description -->
+          <p class="text-muted">
+            Back-End development for web pages and mobile applications.
+          </p>
+          <!-- Btn -->
+          <a href="#" class="btn btn-outline-danger">
+            Go
+          </a>
+        </article>
+      </section>
+
+      <!-- What I Do -->
+      <section class="row justify-content-center text-center text-md-start">
+        <!-- Title -->
+        <h2 class="col-md-4 text-center display-4 text-capitalize">
+          Who I'm
+        </h2>
+        <!-- Info -->
+        <div class="col-10 col-md-8">
+          <p class="text-muted fw-light">
+            I am a Python developer, I am 30 years old, I am from Argentina, I am an Architect and I am currently studying to be a Full Stack developer.
+          </p>
+          <a href="https://drive.google.com/file/d/1E9nlDDNfGOYrljraHH0t6hJAy5zxZDyl/view?usp=share_link" target="_blank" download="CV-Franco" class="btn btn-danger rounded-pill px-4">Check my CV</a>
+        </div>
+      </section>
+      <hr>
+      <!-- Portafolio -->
+      <main id="secPortafolio" class="row justify-content-center pt-5 sec-portfolio-js">
+      <!-- Column 1 -->
+      <div class="col-10 col-md-4 order-2 order-md-1">
+        <div class="row">
+          <!-- IMG 1 -->
+          <a 
+          href="#" class="col-12 mb-3 portfolio-item" 
+          data-bs-toggle="modal" 
+          data-bs-target="#modal-portfolio"
+          >
+            <img src="img/portfolio/Portfolio-03.png" alt="Modelado 3D" class="w-100 img-btn-modal-js">
+          </a>
+          <!-- IMG 2 -->
+          <a href="#" class="col-12 mb-3 portfolio-item" data-bs-toggle="modal" data-bs-target="#modal-portfolio">
+            <img src="img/portfolio/Portfolio-04.png" alt="Diseño Grafico" class="w-100 img-btn-modal-js">
+          </a>
+          <!-- IMG 3 -->
+          <a href="#" class="col-12 mb-3 portfolio-item" data-bs-toggle="modal" data-bs-target="#modal-portfolio">
+            <img src="img/portfolio/Portfolio-01.png" alt="Branding" class="w-100 img-btn-modal-js">
+          </a>
+        </div>
+      </div>
+      <!-- Column 2 -->
+      <div class="col-10 col-md-8 order-1 order-md-2">
+        <div class="row">
+          <!-- Title -->
+          <h2 class="col-12 py-3 text-end display-4">
+            Portfolio
+          </h2>
+          <!-- IMG 1B -->
+          <a 
+          href="#" 
+          class="col-12 mb-3 portfolio-item" 
+          data-bs-toggle="modal" 
+          data-bs-target="#modal-portfolio"
+          >
+            <img 
+            src="img/portfolio/Portfolio-05.png" 
+            alt="Web Design" 
+            class="w-100 img-btn-modal-js"
+            >
+          </a>
+          <!-- IMG 2B -->
+          <a href="#" class="col-12 col-md-6 mb-3 portfolio-item" data-bs-toggle="modal" data-bs-target="#modal-portfolio">
+            <img src="img/portfolio/Portfolio–02.png" alt="Illustration" class="w-100 img-btn-modal-js">
+          </a>
+          <!-- IMG 3B -->
+          <a href="#" class="col-12 col-md-6 mb-3 portfolio-item" data-bs-toggle="modal" data-bs-target="#modal-portfolio">
+            <img src="img/portfolio/Portfolio-06.png" alt="Research" class="w-100 img-btn-modal-js">
+          </a>
+        </div>
+      </div>
+      <!-- General modal -->
+      <div class="col-9 modal fade" id="modal-portfolio">
+        <div class="modal-dialog position-relative modal-dialog-centered">
+          <img src="" alt="" class="w-100 img-modal-js">
+        </div>
+      </div>
+      </main>
+    </div>
+
+    <!-- Previous employers-->
+    <div class="bg-success-subtle d-none d-md-block">
+      <!-- Companies -->
+      <div class="container">
+        <div class="row align-items-center justify-content-around py-5 sec-clients">
+          <!-- Marca 1 -->
+          <a href="#" class="col-sm-5 col-md-3">
+            <img src="img/customers/DXC.png" 
+            alt="DXC Technology" 
+            class="w-75">
+          </a>
+          <!-- Marca 2 -->
+          <a href="#" class="col-sm-5 col-md-3">
+            <img src="img/customers/Rotaract.png" alt="Rotaract" class="w-75">
+          </a>
+          <!-- Marca 3 -->
+          <a href="#" class="col-sm-5 col-md-3">
+            <img src="img/customers/CAPTURA.png" alt="CAPTURA" class="w-75">
+          </a>
+          <!-- Marca 4 -->
+          <a href="#" class="col-sm-5 col-md-3">
+            <img src="img/customers/kong.svg" alt="M4" class="w-75">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="secContact" class="container">
+      <section class="row justify-content-center">
+        <div class="col-9 col-lg-7 bg-white text-center py-4 px-3 mt-5 shadow position-relative photo-frame">
+          <p class="h6 text-muted fw-light">
+            Reach me at:
+          </p>
+          <a href="mailto:becerrafranco1992@gmail.com" 
+          class="h3 text-decoration-none text-break">
+            becerrafranco1992@gmail.com
+          </a>
+        </div>
+      </section>
+      <!-- Navbar -->
+      <div class="row justify-content-center text-center">
+        <!-- Brand -->
+        <a 
+        href="#" 
+        class="navbar-brand mb-4"
+        >
+          <!-- <img src="./img/logo-g.png" alt="logo"> -->
+          <span class="material-symbols-outlined">
+            atr
+            </span>
+        </a>
+
+        <!-- Items -->
+        <nav class="nav col-11 justify-content-center mb-4 text-dark">
+          <a href="#secHome" class="nav-link active text-dark">Home</a>
+          <a href="#secService" class="nav-link text-dark">Service</a>
+          <a href="#secPortafolio" class="nav-link text-dark">MyPortfolio</a>
+          <a href="#secContact" class="nav-link text-dark">Contact</a>
+        </nav>
+        <!-- Social Links-->
+        <div class="icons-social-networks">
+          <!-- Instagram -->
+          <a href="#" target="_blank" class="bg-instagram bf-gradient">
+            <img src="img/icons/30instagram.svg" alt="Instagram">
+          </a>
+          <!-- Linkedin-->
+          <a href="#" target="_blank" class="bg-linkedin bg-gradient mx-3">
+            <img src="img/icons/30linkedin.svg" alt="Linkedin">
+          </a>
+          <!-- GitHub-->
+          <a href="#" target="_blank" class="bg-github bg-gradient">
+            <img src="img/icons/30github.svg" alt="Github">
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" 
+    crossorigin="anonymous">
+    </script>
+    <!-- JS Main -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

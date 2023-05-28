@@ -4,14 +4,18 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
+from seleniumEasy.booking_filtration import BookingFiltration
+from seleniumEasy.booking_report import BookingReport
+from prettytable import PrettyTable
+
 
 class Booking(webdriver.Chrome):
     def __init__(self, teardown=False):
-        self.teardown = teardown # Not working...
+        self.teardown = teardown # Not working. reason unknown
         options = webdriver.ChromeOptions()
         options.add_argument('--start-maximized')
         options.add_argument('--disable-extensions')
-        
+        options.add_experimental_option('excludeSwitches', ['enable-logging']) # To skip DEVICE_logging errors.
         service = ChromeService(ChromeDriverManager().install())  # Instantiate ChromeService
         
         super(Booking, self).__init__(service=service, options=options, desired_capabilities=None)
@@ -23,7 +27,7 @@ class Booking(webdriver.Chrome):
     
     def land_first_page(self):
         self.get(const.BASE_URL)
-        time.sleep(3)
+        time.sleep(1)
 
     def close_pop_up(self):
         try:
@@ -44,7 +48,6 @@ class Booking(webdriver.Chrome):
             By.XPATH, f'//div[contains(text(), "{currency}")]'
         )
         selected_currency_element.click()
-        time.sleep(3)
     
     def set_place(self, place_to_go):
         search_field = self.find_element(
@@ -52,7 +55,6 @@ class Booking(webdriver.Chrome):
         )
         search_field.clear()
         search_field.send_keys(place_to_go)
-        time.sleep(1)
         first_option_location = self.find_element(
             By.XPATH, '/html/body/div[2]/div[2]/div/div/form/div[1]/div[1]/div/div/div[2]/ul/li[1]'
         )
@@ -92,13 +94,45 @@ class Booking(webdriver.Chrome):
         )
         for _ in range(count - 1):
             increase_button_element.click()
-        time.sleep(5)
 
     def submit_btn(self):
         search_button = self.find_element(
             By.CSS_SELECTOR, 'button[type="submit"]'
         )
         search_button.click()
+
+    
+    def apply_filtrations(self):
+        filtration = BookingFiltration(driver=self) # instance
+        filtration.apply_start_rating(3,5)
+        filtration.sort_price_low()
+        time.sleep(3)
+
+
+    def report_results(self):
+        
+        hotel_boxes = self.find_element(
+            By.CLASS_NAME, 'd4924c9e74'
+        )
+        report = BookingReport(hotel_boxes)
+        print(report.pull_deal_box_attributes())
+
+        table = PrettyTable ()
+        table.field_names = ['Name','Price','Score']
+        table.add_rows(report.pull_deal_box_attributes())
+        table.align = 'l'
+        table.border = True
+        print(table)
+'''     
+        table = PrettyTable(
+            field_names = ['Hotel Name','Hotel Price','Hotel Score']
+        )
+        table.add_rows(report.pull_deal_box_attributes())
+        print(table)
+
+'''
+
+        
 
 
 

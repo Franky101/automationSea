@@ -35,13 +35,16 @@ class BookingReport:
             
 
             # Pulling hotel score
-            hotel_score = deal_box.find_element(
-                By.CSS_SELECTOR, 'div[aria-label$="de 5"]'
+            """ hotel_score = deal_box.find_element(
+                By.CSS_SELECTOR, 'div[aria-label$=" 5"]'
             ).get_attribute(
                 'aria-label'
-            ).strip()
+            ).strip() """
             
-            collection.append(
+            """ collection.append(
                 [hotel_name, hotel_price, hotel_score]
+            ) """
+            collection.append(
+                [hotel_name, hotel_price]
             )
         return collection

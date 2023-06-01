@@ -118,19 +118,25 @@ class Booking(webdriver.Chrome):
         print(report.pull_deal_box_attributes())
 
         table = PrettyTable ()
-        table.field_names = ['Name','Price','Score']
+        # table.field_names = ['Name','Price','Score']
+        table.field_names = ['Name','Price']
         table.add_rows(report.pull_deal_box_attributes())
         table.align = 'l'
         table.border = True
         print(table)
-'''     
-        table = PrettyTable(
-            field_names = ['Hotel Name','Hotel Price','Hotel Score']
-        )
-        table.add_rows(report.pull_deal_box_attributes())
-        print(table)
 
-'''
+    def go_back(self):
+        logo_element= self.find_element(
+            By.CSS_SELECTOR, 'a[data-testid="header-booking-logo"]'
+        )
+
+    """ def select_card(self):
+        available_element = self.find_element(
+            By.XPATH, '/html/body/div[4]/div/div[4]/div[1]/div[1]/div[4]/div[2]/div[2]/div/div/div[3]/div[2]/div[1]/div[2]/div/div[2]/div[2]/div/div[2]/a'
+        )
+        available_element.click() """
+    
+        
 
         
 
